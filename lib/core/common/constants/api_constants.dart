@@ -1,5 +1,10 @@
+abstract class NetworkConstants {
+  const NetworkConstants();
 
-/* -- LIST OF Constants used in APIs -- */
-
-// Example
-const String tSecretAPIKey = "cwt_live_b2da6ds3df3e785v8ddc59198f7615ba";
+  static const baseUrl = 'http://10.238.218.64:3000/api/v1';
+  // static const baseUrl = 'http://127.0.0.1:3000/api/v1';
+  static const authUrl = '127.0.0.1:3000';
+  static const apiUrl = '/api/v1';
+  static const headers = {'Content-Type': 'application/json; charset=UTF-8'};
+  static const pageSize = 10;
+}
