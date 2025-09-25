@@ -4,6 +4,7 @@ import 'package:ecom/core/common/styles/shadows.dart';
 import 'package:ecom/core/common/widgets/images/rounded_image.dart';
 import 'package:ecom/core/common/widgets/products/text/brand_title_text_with_verified_icon.dart';
 import 'package:ecom/core/utils/helpers/helper_functions.dart';
+import 'package:ecom/src/store/presentation/views/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -22,7 +23,10 @@ class ProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ProductDetailView()));
+      },
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
